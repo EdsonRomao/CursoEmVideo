@@ -1,0 +1,12 @@
+"""
+Um professor quer sortear seus quatro alunos para apagar o quadro, faça um programa que ajude
+ele, lendo o nome deles e esquevendo o nome do escolhido.
+"""
+from random import choice
+aluno1 = input('Primeiro aluno: ')
+aluno2 = input('Segundo aluno: ')
+aluno3 = input('Terceiro aluno: ')
+aluno4 = input('Quarto aluno: ')
+lista = [aluno1, aluno2, aluno3, aluno4]
+escolhido = choice(lista)
+print(f'O aluno escolhido foi {escolhido}.')
