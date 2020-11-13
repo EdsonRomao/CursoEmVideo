@@ -6,31 +6,22 @@ O programa deve perguntar ao usuario se ele quer ou não continuar a
 digitar valores.
 """
 
-maior = 0
-menor = 0
-media = 0
-soma = 0
-n = -1
-cont = 0
-while n != 0:
-    n = int(input("Digite um número: "))
-    soma += n
+media = menor = maior = cont = soma = 0
+continuar = 'S'
+
+while continuar in 'Ss':
+    num = int(input('Digite um número: '))
+    soma += num
     cont += 1
-    media = soma / cont
-    if n == 1:
-        maior += n
-        menor += n
-    if n < menor:
-        menor = n
-    if n > maior:
-        maior = n
-    if n == 0:
-        cont = cont - 1
+    if cont == 1:
+        maior = menor = num
+    else:
+        if num > maior:
+            maior = num
+        if num < menor:
+            menor = num
+    continuar = str(input('Quer continuar? [S/N] ')).lower().strip()[0]
+media = soma / cont
+print(f'você digitou {cont} números e a média foi {media}')
+print(f'O maior número é {maior} e o menor {menor}')
 
-'''   if continuar == 'S':
-        n = int(input('Digite um número: '))
-    if continuar == 'N':'''
-
-print(f'A media entre os números foi {media}')
-print(f'O maior número digitado foi {maior}')
-print(f'O menor número digitador foi {menor}')
