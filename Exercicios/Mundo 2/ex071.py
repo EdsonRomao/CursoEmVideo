@@ -30,3 +30,5 @@ while True:
         if total == 0:
             break
 
+
+# Tive dificuldade para entender a logíca desse exercicio, volto dias mais tarde para ver.
